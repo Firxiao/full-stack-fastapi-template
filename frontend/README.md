@@ -37,6 +37,8 @@ nvm use
 
 ```bash
 npm install
+# For China Mirrors
+npm config set registry https://registry.npmmirror.com
 ```
 
 * And start the live server with the following `npm` script:

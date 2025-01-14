@@ -4,6 +4,10 @@ WORKDIR /app
 
 COPY package*.json /app/
 
+RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
+
+RUN npm config set registry https://registry.npmmirror.com
+
 RUN npm install
 
 RUN npx -y playwright install --with-deps
